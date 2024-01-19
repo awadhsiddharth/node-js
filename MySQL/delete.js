@@ -7,6 +7,8 @@ var connection = sql.createConnection({
     database: 'mydb'
 });
 
+// delete a few records
+
 connection.connect((err) => {
     if (err) {
         throw err;
@@ -19,3 +21,25 @@ connection.connect((err) => {
         });
     }
 });
+
+// delete a table
+
+con.connect(function(err) {
+    if (err) throw err;
+    var sql = "DROP TABLE customers";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log("Table deleted");
+    });
+  });
+
+  // drop only if exists
+
+  con.connect(function(err) {
+    if (err) throw err;
+    var sql = "DROP TABLE IF EXISTS customers";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log(result);
+    });
+  });
