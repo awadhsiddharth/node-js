@@ -1,0 +1,49 @@
+let x='Tic';
+x=x+'Tac';
+x=x+x
+
+const y = ()=>{
+  return x;
+}
+window.alert(y)
+undefined
+let x='Tic';
+x=x+'Tac';
+x=x+x
+
+const y = ()=>{
+  return 'TicTacTicTac';
+}
+window.alert(y)
+undefined
+let x='Tic';
+x=x+'Tac';
+x=x+x
+ const z = console.log(x);
+
+const y = ()=>{
+  return z;
+}
+window.alert(y)
+VM35:4 TicTacTicTac
+undefined
+let x='Tic';
+x=x+'Tac';
+x=x+x
+ const z = console.log(x);
+
+const y = ()=>{
+  return z;
+}
+window.alert(y)
+VM37:4 TicTacTicTac
+let x='Tic';
+x=x+'Tac';
+x=x+x
+
+const y = ()=>{
+  return 'TicTacTicTac';
+}
+window.alert(y)
+undefined
+undefined
