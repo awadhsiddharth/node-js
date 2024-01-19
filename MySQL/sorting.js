@@ -15,6 +15,6 @@ con.connect((err) => {
                 throw err
                 console.log(result);
             }
-        })
+        });
     }
 });
