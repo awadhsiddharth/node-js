@@ -20,3 +20,18 @@ con.connect((error) => {
         console.log("Connection not established!");
     }
 })
+
+
+// query a database
+
+con.connect((err) => {
+    if (err) {
+        throw err;
+        con.query(sql, (err, result) => {
+            if (err) {
+                throw err;
+                console.log("Result:" + result);
+            }
+        });
+    }
+});
