@@ -13,5 +13,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "sid",
+  "type": "module",
   "license": "ISC"
 }
