@@ -6,7 +6,7 @@ const y = ()=>{
   return x;
 }
 window.alert(y)
-undefined
+
 let x='Tic';
 x=x+'Tac';
 x=x+x
@@ -26,7 +26,7 @@ const y = ()=>{
 }
 window.alert(y)
 VM35:4 TicTacTicTac
-undefined
+
 let x='Tic';
 x=x+'Tac';
 x=x+x
@@ -45,5 +45,4 @@ const y = ()=>{
   return 'TicTacTicTac';
 }
 window.alert(y)
-undefined
-undefined
+
