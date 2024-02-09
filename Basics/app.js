@@ -14,6 +14,13 @@
 
 // // console.log(); = window.console.log();
 
-var message = '';
+// var message = '';
 // window.message
-console.log(global.message);
+// console.log(global.message);
+
+// console.log(module);
+
+const logger = require('./logger')
+
+logger.log('message')
+console.log(logger);
