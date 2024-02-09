@@ -48,13 +48,16 @@ emitter.on('messageLogged', (arg) => { // e, event, eventArg
     console.log(`Listener called`, arg);
 });
 
-const log = require('./logger')
-log('message')
 // to raise the events
 // making a noise, produce- signal
 // emitter.emit('messageLogged', { id: 1, url: 'http://cricbuzz.com' });
 
-const log = require('./logger');
-log('message')
+const Logger = require('./logger');
+const logger = new Logger();
+logger.on('msgLogged', (arg)=>{
+    console.log(`Listener called`, arg);
+});
+
+logger.log('message')
 
 
