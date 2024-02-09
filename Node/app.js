@@ -20,6 +20,21 @@
 // console.log(`Free Memory : ${freeMemory}`);
 // console.log(`Up Time is : ${upTime}`);
 
+const fs = require('fs');
 
+// Synchronous method
+// const files = fs.readdirSync('./');
+// console.log(files);
+
+
+// Always prefer to use asynchronous method
+fs.readdir('$', (err, files) => {
+    if (err) {
+        throw err;
+    }
+    else {
+        console.log(`Result`, files);
+    }
+});
 
 
