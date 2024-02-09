@@ -20,7 +20,7 @@
 // console.log(`Free Memory : ${freeMemory}`);
 // console.log(`Up Time is : ${upTime}`);
 
-const fs = require('fs');
+// const fs = require('fs');
 
 // Synchronous method
 // const files = fs.readdirSync('./');
@@ -28,13 +28,33 @@ const fs = require('fs');
 
 
 // Always prefer to use asynchronous method
-fs.readdir('$', (err, files) => {
-    if (err) {
-        throw err;
-    }
-    else {
-        console.log(`Result`, files);
-    }
+// fs.readdir('$', (err, files) => {
+//     if (err) {
+//         throw err;
+//     }
+//     else {
+//         console.log(`Result`, files);
+//     }
+// });
+
+// EventEmitter is a class 
+const EventEmitter = require('events')
+// an instance of class
+const emitter = new EventEmitter();
+
+// The order is important
+// register a listener
+emitter.on('messageLogged', (arg) => { // e, event, eventArg
+    console.log(`Listener called`, arg);
 });
+
+const log = require('./logger')
+log('message')
+// to raise the events
+// making a noise, produce- signal
+// emitter.emit('messageLogged', { id: 1, url: 'http://cricbuzz.com' });
+
+const log = require('./logger');
+log('message')
 
 
