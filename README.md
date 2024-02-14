@@ -4,3 +4,5 @@
 
 // Node uses asynchronous programming approach
 
+// LTS -- Long Term Support
+
